@@ -9,21 +9,21 @@ class State(rx.State):
 
 
 def index() -> rx.Component:
-    return rx.container(
-        rx.color_mode.button(position="top-right"),
+    return rx.box(
         navbar(),
-        rx.hstack(
-            rx.heading("🔵 Crea tu propia máquina de pong :", size="8"),
-            spacing="9",
+        rx.vstack(
+            rx.heading("🔵 Crea tu propia máquina", size="8"),
             justify="center",
-            min_height="15vh"
+            min_height="25vh",
+            padding_y="10px",
         ),
-        rx.hstack(    
-            rx.image(src="pong_01.png",alt="Maquina de pong Arduino UNO",width="200", height="100"),
-            rx.image(src="pong_02.png",alt="Maquina de pong Arduino UNO",width="200", height="100"),
-            spacing="9",
-            justify="center",
-            min_height="45vh"
+        rx.vstack(    
+            rx.image(src="pong_01.png",alt="Maquina de pong Arduino UNO",width="370px", height="230px"),
+            rx.image(src="pong_02.png",alt="Maquina de pong Arduino UNO",width="370px", height="230px"),
+            spacing="3",
+            min_height="35vh",
+            padding_x="30%",
+            position="sticky"
         ),
         rx.vstack( 
             rx.text(
@@ -58,13 +58,16 @@ def index() -> rx.Component:
                 rx.button("Enlace de gitHub"),
                 href="https://github.com/carlosvr48",
                 is_external=True,
+                color="red",
                 size="5",
                 weight="medium",
                 trim="normal"
-            ),
+            ),        
             rx.image(src="github.png",alt="gitHub",width="64", height="25"),
             direction="row",
-            align="center"  
+            align="center",
+            padding_x="30%",
+
         ),
         rx.vstack( 
             rx.text("Intenta representar la maravillosa máquina de videojuegos de Atari Pong. La primera máquina se llamó Tele-Games Pong (1975) y la segunda Atari Pong (1976). En el siguiente enlace de la wiki dejo un poco de historia.",size="5"),
@@ -83,7 +86,8 @@ def index() -> rx.Component:
             ),
             rx.image(src="pong1.png",alt="Maquina de pong Atari",width="100", height="50"),
             direction="row",
-            align="center"        
+            align="center",
+            padding_x="30%",
         ),    
         rx.vstack( 
             rx.text(
@@ -95,14 +99,22 @@ def index() -> rx.Component:
             justify="center",
             min_height="35vh",
         ),
-        rx.link(
-            rx.button("Enlace de Arduinoinnovación"),
-            href="https://arduinovacao.blogspot.com/",
-            is_external=True,
-            size="5",
-            weight="medium",
-            trim="normal"
-        ),       
+        rx.hstack(
+            rx.link(
+                rx.button("Enlace de Arduinoinnovación"),
+                href="https://arduinovacao.blogspot.com/",
+                is_external=True,
+                size="5",
+                weight="medium",
+                trim="normal",
+            ),padding_x="30%"
+        ),    
+        align_items="start", 
+        max_width="1200px",
+        padding_x="10px",
+        padding_y="10px",
+        bg="#FFF3BC",
+        flex_direction=["column","column","column","row","row"]
     )
 
 app = rx.App()
