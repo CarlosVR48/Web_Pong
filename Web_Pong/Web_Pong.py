@@ -26,7 +26,7 @@ def index() -> rx.Component:
             align="center",
             min_height="35vh",
             padding_x="1%",
-            position="sticky"
+            position="sticky",
         ),
         
         rx.vstack( 
@@ -36,16 +36,15 @@ def index() -> rx.Component:
                 rx.list.item("UN PLAYER - FRONTON"),
                 rx.list.item("DOS PLAYERS - PONG"),
                 color="red",
-                aling="start,"
+                aling="start",
             ),
-            rx.text(
-                "El repositorio del programa de pong del Arduino UNO, se encuentra en el enlace de gitHub de aquí abajo.", size="5"),
-            color="black",
-            direction="column",
-            spacing="5",
-            justify="center",
-            min_height="30vh",
-            padding_y="10px"
+            rx.text("El repositorio del programa de pong del Arduino UNO, se encuentra en el enlace de gitHub de aquí abajo.", size="5"),
+                color="black",
+                direction="column",
+                spacing="5",
+                justify="center",
+                min_height="30vh",
+                padding_y="10px",
         ),       
 
         rx.hstack(
@@ -55,17 +54,15 @@ def index() -> rx.Component:
                         border_radius="2em",
                         box_sizing="border-box",
                         color="withe"),
-
-                href="https://github.com/CarlosVR48/Arduino-Pong/",
-                is_external=True,
-                weight="medium",
-                trim="normal"
+                        href="https://github.com/CarlosVR48/Arduino-Pong/",
+                        is_external=True,
+                        weight="medium",
+                        trim="normal",
             ),        
             rx.image(src="github.png",alt="gitHub",width="64", height="25"),
-            direction="row",
-            align="center",
-            padding_x="25%",
-            padding_y="15%",
+                align="center",
+                justify="center",
+                padding_y="10%",
         ),
 
         rx.vstack( 
@@ -82,7 +79,7 @@ def index() -> rx.Component:
                url="/pong_01.mp4",
                width="400px",
                height="200px",
-               controls=True
+               controls=True,
             ),
             rx.video(
                url="/pong_02.mp4",
@@ -93,7 +90,7 @@ def index() -> rx.Component:
             direction="row",
             spacing="5",
             justify="center",
-            min_height="35vh"
+            min_height="35vh",
         ),
        
 
@@ -109,48 +106,47 @@ def index() -> rx.Component:
         rx.hstack(     
             rx.link(
                 rx.button(rx.icon(tag="book_lock"),"Wikipedia",
-                          color_scheme="red",
-                        border_radius="2em",
-                        box_sizing="border-box",
-                        color="withe"),
-                href="https://es.wikipedia.org/wiki/Atari_Pong",
-                is_external=True,
-                direction="row",
-                weight="medium",
-                trim="normal"
+                    color_scheme="red",
+                    border_radius="2em",
+                    box_sizing="border-box",
+                    color="withe"),
+                    href="https://es.wikipedia.org/wiki/Atari_Pong",
+                    is_external=True,
+                    weight="medium",
+                    trim="normal",
             ),
-            rx.image(src="pong1.png",alt="Maquina de pong Atari",width="100", height="50"),
-            direction="row",
-            align="center",
-            padding_x="10%",
-            padding_y="20%"
+            rx.image(src="AtariPong.png",alt="Maquina de pong Atari",width="75", height="25"),
+                    align="center",
+                    justify="center",
+                    padding_y="10%",
         ),    
 
         rx.vstack( 
             rx.text(
                 "Tendrás que descargar estas tres librerías desde la aplicación de Arduino. <TVout.h> , <video_gen.h>  y <fontALL.h>.",size="5"),
-            rx.text(
-                "Te dejo los esquemas del cableado. Si te gustan los proyectos en Arduino mírate el enlace que te dejo. De a hi saque la base de esto. Gracias.",size="5"),
-            color="black",
-            direction="column",
-            spacing="2",
-            justify="center",
-            min_height="35vh",
+            rx.text("Te dejo los esquemas del cableado. Si te gustan los proyectos en Arduino mírate el enlace que te dejo. De a hi saque la base de esto. Gracias.",size="5"),
+                    color="black",
+                    direction="column",
+                    spacing="2",
+                    justify="center",
+                    min_height="35vh",
         ),
         rx.hstack(
             rx.link(
                 rx.button(rx.icon(tag="album"),"Arduinoinnovación",
-                        color_scheme="red",
-                        border_radius="2em",
-                        box_sizing="border-box",
-                        color="withe"),
-                href="https://arduinovacao.blogspot.com/",
-                is_external=True,
-                size="5",
-                weight="medium",
-                trim="normal",
-                padding_x="30%"
+                    color_scheme="red",
+                    border_radius="2em",
+                    box_sizing="border-box",
+                    color="withe"),
+                    href="https://arduinovacao.blogspot.com/",
+                    is_external=True,
+                    size="5",
+                    weight="medium",
+                    trim="normal",
             ),
+            align="center",
+            justify="center",
+            padding_y="10%",
         ),    
         bg="#FFF3BC",
         position="sticky",
