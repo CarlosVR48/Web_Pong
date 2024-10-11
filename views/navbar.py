@@ -1,11 +1,7 @@
 import reflex as rx
-import datetime,time
+import datetime
 
 def navbar() -> rx.Component:
-    seg = time.time()
-    local = time.ctime(seg)
-    
-    
     anno=datetime.date.today().year
     mes = datetime.date.today().month
     dia = datetime.date.today().day
@@ -20,7 +16,6 @@ def navbar() -> rx.Component:
             color="black",
             width="100%"
         ),
-        
         bg="#FFF3BC",
         position="sticky",
         border_bottom="2px solid #000000",
