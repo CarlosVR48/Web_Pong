@@ -1,6 +1,6 @@
 from rxconfig import config
 import reflex as rx
-from views.navbar import navbar
+from componets.navbar import navbar
 
 class State(rx.State):
     """The app state."""
