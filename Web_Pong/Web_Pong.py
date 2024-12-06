@@ -2,6 +2,7 @@ from rxconfig import config
 import reflex as rx
 from componets.navbar import navbar
 
+
 class State(rx.State):
     """The app state."""
 

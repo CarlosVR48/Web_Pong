@@ -2,9 +2,6 @@ import reflex as rx
 import datetime
 
 def navbar() -> rx.Component:
-    #anno=datetime.date.today().year
-    #mes = datetime.date.today().month
-    #dia = datetime.date.today().day
     
     return rx.vstack(
         rx.hstack(
