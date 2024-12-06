@@ -1,15 +1,19 @@
+from pytz import timezone
 import reflex as rx
-import datetime
+import datetime,time
 
 def navbar() -> rx.Component:
-    
+    dia_españa = datetime.datetime.now(timezone("Europe/Madrid"))
+    final_españa = datetime.datetime.strftime(dia_españa,"%d-%m-%Y %H:%M:%S ")
+
     return rx.vstack(
+
         rx.hstack(
             #rx.color_mode.button(position="top-right"),
             rx.image("navbar.png",alt="tenis",width="32px",heigt="32px"),
-            rx.text("PING-PONG"),
+            rx.text(f"PING-PONG"),
             rx.spacer(),
-            rx.text(f"{datetime.date.today().day}/{datetime.date.today().month}/{datetime.date.today().year}"),
+            rx.text(f"{final_españa}"),
             color="black",
             width="100%"
         ),
@@ -21,4 +25,5 @@ def navbar() -> rx.Component:
         top="0",
         z_index="999",
         width="100%",
+        
     )
