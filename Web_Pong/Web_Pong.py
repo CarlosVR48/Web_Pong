@@ -6,7 +6,7 @@ from componets.navbar import navbar
 class State(rx.State):
     """The app state."""
 
-    ...
+    
 
 def index() -> rx.Component:
     return rx.box(
